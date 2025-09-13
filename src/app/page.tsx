@@ -1,3 +1,4 @@
+"use client";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -13,31 +14,35 @@ import {
   Zap,
   BookOpen,
   Settings,
-  Download,
   Eye,
   Search,
   Calculator,
   TrendingUp,
-  PieChart
+  PieChart,
 } from "lucide-react";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function Documentation() {
+  const router = useRouter();
   return (
     <DashboardLayout>
       <div className="space-y-8 max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center space-y-4">
-          <h1 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Hướng Dẫn Sử Dụng AI Document Analyzer
+          <h1 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent h-20 mt-10">
+            Hướng Dẫn Sử Dụng AI Document Analyzer & SEO Tools
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Học cách sử dụng công cụ phân tích tài liệu thông minh để xử lý PDF, DOCX và Excel với sức mạnh của AI
+            Sơ lượt cách dùng công cụ phân tích tài liệu thông minh và SEO Analyzer với sức mạnh của Google Gemini AI
           </p>
           <Badge variant="secondary" className="text-sm px-4 py-2">
             <BookOpen className="w-4 h-4 mr-2" />
-            Phiên bản 1.0 - Cập nhật mới nhất
+            Phiên bản 1.2.0 - SEO Analyzer
           </Badge>
         </div>
+
+
 
         {/* Quick Start */}
         <Card className="border-blue-200 dark:border-blue-800">
@@ -72,6 +77,146 @@ export default function Documentation() {
                 </div>
                 <h3 className="font-semibold mb-2">Nhận Kết Quả</h3>
                 <p className="text-sm text-muted-foreground">Xem phân tích và kết quả từ AI</p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* SEO Analyzer Guide */}
+        <Card className="border-green-200 dark:border-green-800">
+          <CardHeader>
+            <CardTitle className="flex items-center text-green-700 dark:text-green-300">
+              <Search className="w-5 h-5 mr-2" />
+              Công Cụ SEO Analyzer
+            </CardTitle>
+            <CardDescription>
+              Phân tích SEO chuyên nghiệp với sức mạnh của Google Gemini AI
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <div className="grid gap-6 md:grid-cols-2">
+              <div className="space-y-4">
+                <div className="flex items-center gap-4">
+                  <Image
+                    src="https://i.postimg.cc/BvmJxz50/78-F5-C96-B-AD3-D-4-D9-B-BA7-A-0162-C06-BA01-B.jpg"
+                    alt="SEO Analyzer Interface"
+                    width={200}
+                    height={150}
+                    className="rounded-lg border shadow-sm"
+                  />
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-medium">Phân Tích Từ Khóa</h4>
+                      <p className="text-sm text-muted-foreground">Phân tích từ khóa theo cấp độ: Primary, Secondary, Long-tail</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-medium">Đánh Giá SEO Score</h4>
+                      <p className="text-sm text-muted-foreground">Điểm SEO tổng thể, độ dễ đọc, mật độ từ khóa</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-medium">Đề Xuất Cải Thiện</h4>
+                      <p className="text-sm text-muted-foreground">Gợi ý Meta Title, Meta Description, cấu trúc Heading</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold">Hướng Dẫn Sử Dụng</h3>
+                <div className="space-y-3">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-6 h-6 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-xs font-bold text-green-600">1</span>
+                    </div>
+                    <div>
+                      <h4 className="font-medium">Nhập Nội Dung</h4>
+                      <p className="text-sm text-muted-foreground">Dán HTML hoặc văn bản cần phân tích SEO</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-6 h-6 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-xs font-bold text-green-600">2</span>
+                    </div>
+                    <div>
+                      <h4 className="font-medium">Chạy Phân Tích</h4>
+                      <p className="text-sm text-muted-foreground">AI sẽ phân tích trong 20-30 giây</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-6 h-6 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-xs font-bold text-green-600">3</span>
+                    </div>
+                    <div>
+                      <h4 className="font-medium">Xem Kết Quả</h4>
+                      <p className="text-sm text-muted-foreground">Điểm SEO, từ khóa, lỗi và đề xuất cải thiện</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-4 border-t">
+                  <div className="flex flex-col gap-2">
+                    <Button className="w-full" onClick={() => router.push('/seo')}>
+                      <Search className="w-4 h-4 mr-2" />
+                      Sử Dụng SEO Analyzer
+                    </Button>
+                    <Button variant="outline" className="w-full" onClick={() => router.push('/updates')}>
+                      <TrendingUp className="w-4 h-4 mr-2" />
+                      Xem Update Log
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* SEO Features Grid */}
+            <div className="pt-6 border-t">
+              <h3 className="text-lg font-semibold mb-4">Tính Năng SEO Chi Tiết</h3>
+              <div className="grid gap-4 md:grid-cols-3">
+                <div className="p-4 border rounded-lg">
+                  <h4 className="font-medium mb-2 flex items-center">
+                    <Search className="w-4 h-4 text-blue-500 mr-2" />
+                    Từ Khóa
+                  </h4>
+                  <ul className="text-sm space-y-1 text-muted-foreground">
+                    <li>• Từ khóa chính (Primary)</li>
+                    <li>• Từ khóa phụ (Secondary)</li>
+                    <li>• Từ khóa dài (Long-tail)</li>
+                    <li>• Phân tích mật độ từ khóa</li>
+                  </ul>
+                </div>
+                <div className="p-4 border rounded-lg">
+                  <h4 className="font-medium mb-2 flex items-center">
+                    <TrendingUp className="w-4 h-4 text-green-500 mr-2" />
+                    Đánh Giá
+                  </h4>
+                  <ul className="text-sm space-y-1 text-muted-foreground">
+                    <li>• Điểm SEO tổng thể</li>
+                    <li>• Độ dễ đọc nội dung</li>
+                    <li>• Cấu trúc Heading</li>
+                    <li>• Tối ưu hóa Meta</li>
+                  </ul>
+                </div>
+                <div className="p-4 border rounded-lg">
+                  <h4 className="font-medium mb-2 flex items-center">
+                    <CheckCircle className="w-4 h-4 text-purple-500 mr-2" />
+                    Đề Xuất
+                  </h4>
+                  <ul className="text-sm space-y-1 text-muted-foreground">
+                    <li>• Meta Title gợi ý</li>
+                    <li>• Meta Description</li>
+                    <li>• Cải thiện cấu trúc</li>
+                    <li>• Chiến lược từ khóa</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </CardContent>
@@ -114,9 +259,9 @@ export default function Documentation() {
                   </div>
                 </div>
               </div>
-              <Button className="w-full" variant="outline">
+              <Button className="w-full" variant="outline" onClick={() => router.push('/pdfs')}>
                 <Eye className="w-4 h-4 mr-2" />
-                Xem Ví Dụ PDF
+                Sử dụng
               </Button>
             </CardContent>
           </Card>
@@ -156,9 +301,9 @@ export default function Documentation() {
                   </div>
                 </div>
               </div>
-              <Button className="w-full" variant="outline">
+              <Button className="w-full" variant="outline" onClick={() => router.push('/documents')}>
                 <FileText className="w-4 h-4 mr-2" />
-                Xem Ví Dụ DOCX
+                Sử dụng
               </Button>
             </CardContent>
           </Card>
@@ -198,9 +343,9 @@ export default function Documentation() {
                   </div>
                 </div>
               </div>
-              <Button className="w-full" variant="outline">
+              <Button className="w-full" variant="outline" onClick={() => router.push('/excel')}>
                 <BarChart3 className="w-4 h-4 mr-2" />
-                Xem Ví Dụ Excel
+                Sử dụng
               </Button>
             </CardContent>
           </Card>
@@ -270,6 +415,30 @@ export default function Documentation() {
                 <p>• <strong>Viết lại</strong>: Cải thiện cấu trúc và ngôn ngữ của văn bản</p>
                 <p>• <strong>Tính toán</strong>: Thực hiện các phép tính phức tạp</p>
                 <p>• <strong>Trực quan hóa</strong>: Tạo biểu đồ từ dữ liệu Excel</p>
+                <p>• <strong>SEO Analysis</strong>: Phân tích SEO chuyên nghiệp với Gemini AI</p>
+              </div>
+            </div>
+
+            {/* SEO Analysis Section */}
+            <div className="space-y-3">
+              <h3 className="text-lg font-semibold flex items-center">
+                <TrendingUp className="w-5 h-5 mr-2 text-green-600" />
+                4. SEO Analyzer
+              </h3>
+              <div className="pl-7 space-y-3">
+                <div>
+                  <h4 className="font-medium text-green-700 dark:text-green-300">Cách sử dụng:</h4>
+                  <p className="text-sm">• Chọn menu <strong>&quot;Phân tích SEO&quot;</strong> trong sidebar</p>
+                  <p className="text-sm">• Dán nội dung HTML hoặc văn bản cần phân tích</p>
+                  <p className="text-sm">• Click <strong>&quot;Phân tích SEO&quot;</strong> để bắt đầu</p>
+                </div>
+                <div>
+                  <h4 className="font-medium text-green-700 dark:text-green-300">Kết quả nhận được:</h4>
+                  <p className="text-sm">• Điểm SEO tổng thể và độ dễ đọc</p>
+                  <p className="text-sm">• Phân tích từ khóa theo cấp độ</p>
+                  <p className="text-sm">• Đề xuất Meta Title và Description</p>
+                  <p className="text-sm">• Gợi ý cải thiện cấu trúc nội dung</p>
+                </div>
               </div>
             </div>
           </CardContent>
@@ -394,30 +563,30 @@ export default function Documentation() {
           <CardHeader>
             <CardTitle className="text-center">Sẵn Sàng Bắt Đầu?</CardTitle>
             <CardDescription className="text-center">
-              Bắt đầu phân tích tài liệu của bạn với AI Document Analyzer
+              Bắt đầu phân tích tài liệu và tối ưu hóa SEO với AI Document Analyzer
             </CardDescription>
           </CardHeader>
           <CardContent className="text-center space-y-4">
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="flex items-center">
+            <div className="grid gap-4 md:grid-cols-2">
+              <Button size="lg" className="flex items-center" onClick={() => router.push('/upload')}>
                 <Upload className="w-5 h-5 mr-2" />
-                Upload Files Ngay
+                Upload Files
               </Button>
-              <Button size="lg" variant="outline" className="flex items-center">
-                <Download className="w-5 h-5 mr-2" />
-                Tải Xuống Ví Dụ
+              <Button size="lg" variant="outline" className="flex items-center" onClick={() => router.push('/seo')}>
+                <Search className="w-5 h-5 mr-2" />
+                SEO Analyzer
               </Button>
             </div>
             <p className="text-sm text-muted-foreground">
-              Hoặc khám phá các tính năng khác trong menu bên trái
+              Khám phá các tính năng AI Document Analyzer và SEO Analysis
             </p>
           </CardContent>
         </Card>
 
         {/* Version Info */}
         <div className="text-center text-sm text-muted-foreground border-t pt-8">
-          <p>AI Document Analyzer v1.0 - Powered by Google Gemini AI</p>
-          <p className="mt-2">Hỗ trợ: PDF, DOCX, XLSX | Tối đa 10MB/file | Phân tích AI thông minh</p>
+          <p>AI Document Analyzer v1.2.0 - Powered by Google Gemini AI</p>
+          <p className="mt-2">Hỗ trợ: PDF, DOCX, XLSX, SEO Analysis | Tối đa 10MB/file | Phân tích AI thông minh</p>
         </div>
       </div>
     </DashboardLayout>

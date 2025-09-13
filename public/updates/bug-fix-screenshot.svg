@@ -1,0 +1,53 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e2e8f0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="400" fill="url(#bg)"/>
+
+  <!-- Split layout -->
+  <text x="150" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">TRƯỚC KHI SỬA</text>
+  <text x="450" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">SAU KHI SỬA</text>
+
+  <!-- Before fix mockup -->
+  <rect x="50" y="50" width="200" height="150" fill="white" stroke="#e2e8f0" stroke-width="2" rx="8"/>
+  <rect x="60" y="60" width="180" height="20" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <rect x="60" y="90" width="180" height="100" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+  <text x="150" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#dc2626">❌ Error: Cannot read properties</text>
+  <text x="150" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f1d1d">of undefined (reading 'length')</text>
+  <rect x="60" y="160" width="80" height="25" fill="#dc2626" rx="4"/>
+  <text x="100" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Retry</text>
+
+  <!-- After fix mockup -->
+  <rect x="350" y="50" width="200" height="150" fill="white" stroke="#e2e8f0" stroke-width="2" rx="8"/>
+  <rect x="360" y="60" width="180" height="20" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <rect x="360" y="90" width="180" height="100" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="450" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#16a34a">✅ Analysis completed successfully</text>
+  <text x="450" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#166534">Results displayed correctly</text>
+  <rect x="360" y="160" width="80" height="25" fill="#16a34a" rx="4"/>
+  <text x="400" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">View Results</text>
+
+  <!-- Error details -->
+  <text x="300" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">Error Fixed: TypeError in SEO Analysis</text>
+
+  <rect x="100" y="260" width="400" height="80" fill="white" stroke="#e2e8f0" stroke-width="1" rx="4"/>
+  <text x="300" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#374151">Issue: API response property access error</text>
+  <text x="300" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#374151">Solution: Added null checks and proper error handling</text>
+  <text x="300" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#059669">Status: ✅ Resolved in v1.1.5</text>
+
+  <!-- Timeline -->
+  <circle cx="150" cy="360" r="8" fill="#dc2626"/>
+  <circle cx="300" cy="360" r="8" fill="#f59e0b"/>
+  <circle cx="450" cy="360" r="8" fill="#16a34a"/>
+
+  <line x1="158" y1="360" x2="292" y2="360" stroke="#d1d5db" stroke-width="2"/>
+  <line x1="308" y1="360" x2="442" y2="360" stroke="#d1d5db" stroke-width="2"/>
+
+  <text x="150" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#dc2626">Bug Reported</text>
+  <text x="300" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#f59e0b">In Progress</text>
+  <text x="450" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#16a34a">Fixed</text>
+</svg>

@@ -5,9 +5,7 @@ const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API_KEY || p
 
 // Các mô hình Gemini có sẵn theo thứ tự ưu tiên
 const GEMINI_MODELS = [
-  "gemini-1.5-flash",     // Nhanh và hiệu quả
-  "gemini-1.5-pro",       // Hiệu suất cao
-  "gemini-1.5-flash-8b",  // Nhẹ
+  "gemini-2.5-flash"
 ];
 
 let currentModelIndex = 0;

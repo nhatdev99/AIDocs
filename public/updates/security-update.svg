@@ -1,0 +1,85 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e2e8f0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="shield" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dc2626;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7f1d1d;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="shieldSecure" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#16a34a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#15803d;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="400" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="300" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1f2937">
+    Security Enhancement - API Protection Update
+  </text>
+
+  <!-- Before Security -->
+  <rect x="50" y="60" width="200" height="150" fill="white" stroke="#e5e7eb" stroke-width="2" rx="8"/>
+  <text x="150" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">BEFORE UPDATE</text>
+
+  <!-- Vulnerable Shield -->
+  <polygon points="150,100 130,130 170,130" fill="url(#shield)" stroke="#991b1b" stroke-width="2"/>
+  <circle cx="150" cy="120" r="8" fill="#dc2626"/>
+  <text x="150" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">!</text>
+
+  <!-- API Requests (vulnerable) -->
+  <rect x="80" y="160" width="140" height="30" fill="#fef2f2" stroke="#fecaca" stroke-width="1" rx="4"/>
+  <text x="150" y="178" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#dc2626">No Rate Limiting</text>
+
+  <rect x="80" y="195" width="140" height="30" fill="#fef2f2" stroke="#fecaca" stroke-width="1" rx="4"/>
+  <text x="150" y="213" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#dc2626">Weak Validation</text>
+
+  <!-- After Security -->
+  <rect x="350" y="60" width="200" height="150" fill="white" stroke="#e5e7eb" stroke-width="2" rx="8"/>
+  <text x="450" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">AFTER UPDATE</text>
+
+  <!-- Secure Shield -->
+  <polygon points="450,100 430,130 470,130" fill="url(#shieldSecure)" stroke="#166534" stroke-width="2"/>
+  <circle cx="450" cy="120" r="8" fill="#16a34a"/>
+  <text x="450" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">✓</text>
+
+  <!-- API Requests (secured) -->
+  <rect x="380" y="160" width="140" height="30" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1" rx="4"/>
+  <text x="450" y="178" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#16a34a">Rate Limiting: 100/min</text>
+
+  <rect x="380" y="195" width="140" height="30" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1" rx="4"/>
+  <text x="450" y="213" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#16a34a">Strong Validation</text>
+
+  <!-- Security Metrics -->
+  <text x="300" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1f2937">Security Improvements</text>
+
+  <!-- Metrics Cards -->
+  <rect x="100" y="260" width="120" height="60" fill="white" stroke="#e5e7eb" stroke-width="1" rx="6"/>
+  <text x="160" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#16a34a">API Security</text>
+  <text x="160" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#16a34a">95%</text>
+  <rect x="110" y="300" width="100" height="8" fill="#e5e7eb" rx="4"/>
+  <rect x="110" y="300" width="95" height="8" fill="#16a34a" rx="4"/>
+
+  <rect x="250" y="260" width="120" height="60" fill="white" stroke="#e5e7eb" stroke-width="1" rx="6"/>
+  <text x="310" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#3b82f6">Rate Limiting</text>
+  <text x="310" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#3b82f6">100%</text>
+  <rect x="260" y="300" width="100" height="8" fill="#e5e7eb" rx="4"/>
+  <rect x="260" y="300" width="100" height="8" fill="#3b82f6" rx="4"/>
+
+  <rect x="400" y="260" width="120" height="60" fill="white" stroke="#e5e7eb" stroke-width="1" rx="6"/>
+  <text x="460" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#f59e0b">Validation</text>
+  <text x="460" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#f59e0b">90%</text>
+  <rect x="410" y="300" width="100" height="8" fill="#e5e7eb" rx="4"/>
+  <rect x="410" y="300" width="90" height="8" fill="#f59e0b" rx="4"/>
+
+  <!-- Version -->
+  <rect x="520" y="10" width="70" height="25" fill="#dc2626" rx="12"/>
+  <text x="555" y="26" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">v1.0.8</text>
+
+  <!-- Security Features List -->
+  <text x="300" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">🔒 JWT Authentication • 🛡️ Input Sanitization • 📊 Request Monitoring • 🚫 DDoS Protection</text>
+</svg>
